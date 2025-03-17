@@ -76,6 +76,7 @@ const CopyKitt: React.FC = () => {
           {displayedElement}
         </div>
       </div>
+      
     </div>
   );
 };
