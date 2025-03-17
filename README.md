@@ -1,6 +1,6 @@
 # NexaBrand: AI-Powered Branding Assistant
 
-![NexaBrand Banner](https://your-image-url.com/banner.png)
+![alt text](images/NexaBrand.webp)
 
 ## Overview
 NexaBrand is a **full-stack SaaS application** that generates AI-driven branding snippets and keyword suggestions for businesses. This project serves as a tutorial for building AI-powered SaaS applications from scratch, leveraging modern cloud technologies.
