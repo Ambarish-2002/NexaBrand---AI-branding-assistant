@@ -5,8 +5,6 @@
 ## Overview
 NexaBrand is a **full-stack SaaS application** that generates AI-driven branding snippets and keyword suggestions for businesses. This project serves as a tutorial for building AI-powered SaaS applications from scratch, leveraging modern cloud technologies.
 
-## 🚀 Live Demo
-🔗 **Try out the live demo here** (Authentication Required): [NexaBrand](https://www.nexabrand.co)
 
 ## ✨ Features
 - AI-generated brand snippets and keyword suggestions
