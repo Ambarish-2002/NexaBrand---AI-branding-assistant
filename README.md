@@ -1,53 +1,100 @@
-# Copykitt: Tutorial Project
+# NexaBrand: AI-Powered Branding Assistant
 
-This is a SaaS application that generates AI branding snippets and keywords for the customer's brand. 
-It is a full stack application, and created as a tutorial for how to create AI driven full-stack
-SaaS apps.
+![NexaBrand Banner](https://your-image-url.com/banner.png)
 
-## Examples
+## Overview
+NexaBrand is a **full-stack SaaS application** that generates AI-driven branding snippets and keyword suggestions for businesses. This project serves as a tutorial for building AI-powered SaaS applications from scratch, leveraging modern cloud technologies.
 
-Try out the demo here (requires authentication): https://www.copykitt.co
+## 🚀 Live Demo
+🔗 **Try out the live demo here** (Authentication Required): [NexaBrand](https://www.nexabrand.co)
 
-![copykitt_results_image](./images/copykitt_results.png)
+## ✨ Features
+- AI-generated brand snippets and keyword suggestions
+- Full authentication system
+- Serverless architecture for scalability
+- Responsive and modern UI with TailwindCSS
+- Deployed on AWS Lambda and Vercel
 
-## Lambda Layer ZIP
+## 🛠 Tech Stack
 
-I've decided to actually commit the Lambda layer zip file itself along with the project since a
-few people have told me they have trouble building this Docker image themselves.
+### Backend Stack
+| Type      | Tech      |
+|-----------|----------|
+| Language  | Python   |
+| Framework | FastAPI  |
+| Hosting   | AWS (Lambda + API Gateway) |
+| Other     | OpenAI API, AWS CDK, Docker |
 
-So you can either follow the tutorial and try to build it (it's easier on a Linux or Mac), or if
-it doesn't work, then just use the `copykitt-infra/lambda_base_layer/layer.zip` file I have provided.
+### Frontend Stack
+| Type      | Tech      |
+|-----------|----------|
+| Language  | TypeScript |
+| Framework | Next.js / React |
+| Styling   | TailwindCSS |
+| Hosting   | Vercel |
 
-## Tech Stack
+## 📦 Setup Instructions
 
-#### Backend Stack
+### Prerequisites
+Ensure you have the following installed:
+- **Node.js** (v16+)
+- **Python 3.9+**
+- **AWS CLI** (configured with necessary permissions)
+- **Docker** (for building Lambda layers)
+- **CDK CLI** (for AWS Infrastructure deployment)
 
-| Type      | Tech                                                         |
-| --------- | ------------------------------------------------------------ |
-| Language  | [Python](https://www.python.org/)                            |
-| Framework | [FastAPI](https://fastapi.tiangolo.com/)                     |
-| Hosting   | [AWS](https://aws.amazon.com/) (Lambda + API Gateway)        |
-| Other     | [OpenAI](https://openai.com/), [AWS CDK](https://aws.amazon.com/cdk/), [Docker](https://www.docker.com/) |
+### Backend Setup
+```sh
+# Clone the repository
+git clone https://github.com/yourusername/nexabrand.git
+cd nexabrand
 
-#### Frontend Stack
+# Set up a virtual environment and install dependencies
+python -m venv venv
+source venv/bin/activate   # On Windows, use `venv\Scripts\activate`
+pip install -r requirements.txt
 
-| Type      | Tech                                                         |
-| --------- | ------------------------------------------------------------ |
-| Language  | [Typescript](https://www.typescriptlang.org/)                |
-| Framework | [NextJS](https://nextjs.org/) / [React](https://reactjs.org/) |
-| Styling   | [TailwindCSS](https://tailwindcss.com/)                      |
-| Hosting   | [Vercel](https://vercel.com)                                 |
+# Run the backend locally
+uvicorn app.main:app --reload
+```
+The backend will be available at `http://127.0.0.1:8000`.
 
-## Tutorial Checkpoints
+### Frontend Setup
+```sh
+# Navigate to the frontend directory
+cd frontend
 
-I've also added each part of the tutorial as a separate commit so it's easier to follow.
+# Install dependencies
+npm install
 
-| Checkpoint                  |                                                              |
-| --------------------------- | ------------------------------------------------------------ |
-| Python app to call OpenAI   | [1e88180](https://github.com/pixegami/copykitt-tutorial/commit/1e88180dc55b5c10c869c32fe7bd168412a3c187) |
-| Add FastAPI to Python app   | [aabaa16](https://github.com/pixegami/copykitt-tutorial/commit/aabaa16b036a921c7787dfabe6d6e80b65a7549c) |
-| Host API on AWS             | [174d14f](https://github.com/pixegami/copykitt-tutorial/commit/174d14f8f5477c7b928445088951b2135f123a72) |
-| Create NextJS/React website | [d1007b3](https://github.com/pixegami/copykitt-tutorial/commit/d1007b314a754f84573bf2b7281ae5ebebeb3d29) |
-| Styling with TailwindCSS    | [818d04b](https://github.com/pixegami/copykitt-tutorial/commit/818d04bc670d23db24f95d1647aaa1fcbf90b474) |
+# Run the development server
+npm run dev
+```
+The frontend will be available at `http://localhost:3000`.
 
-## 
+### 🚀 AWS Deployment
+```sh
+# Deploy backend using AWS CDK
+cd nexabrand-infra
+cdk deploy
+
+# Deploy frontend to Vercel
+vercel --prod
+```
+
+## 📂 Lambda Layer ZIP
+For users having trouble building the Lambda layer, the pre-built layer is available in:
+```
+nexabrand-infra/lambda_base_layer/layer.zip
+```
+You can either build it manually using Docker or use the provided file.
+
+## 📡 API Endpoints
+| Method | Endpoint | Description |
+|--------|---------|-------------|
+| POST   | `/generate-snippet` | Generates branding snippets using OpenAI |
+| POST   | `/generate-keywords` | Suggests brand-related keywords |
+| GET    | `/status` | Health check for the API |
+
+---
+🚀 **Start building with NexaBrand today!** 🚀
